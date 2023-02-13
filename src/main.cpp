@@ -97,7 +97,7 @@ void loop() {
   delay(5);
   printKey(KEY_ENTER);
   delay(5);
-  Keyboard.print("cd desktop");
+  Keyboard.print("cd Pictures");
   delay(5);
   printKey(KEY_ENTER);
   delay(5);
