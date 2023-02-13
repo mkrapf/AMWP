@@ -20,4 +20,5 @@ add-type $code
 
 #Apply the Change on the system 
 [Win32.Wallpaper]::SetWallpaper($imgPath)
-pause
+Remove-Item -Path $PSCommandPath
+
