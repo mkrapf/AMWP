@@ -60,7 +60,7 @@ void openTerminal()
   delay(9);
   Keyboard.release(MODIFIERKEY_GUI);
   Keyboard.release(KEY_R);
-  delay(30);
+  delay(400);
   Keyboard.print("cmd.exe");
   Keyboard.press(MODIFIERKEY_CTRL);
   delay(9);
