@@ -1,6 +1,6 @@
 #Modify Path to the picture accordingly to reflect your infrastructure
-Invoke-WebRequest -Uri "https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg" -OutFile "$env:userprofile\Desktop\wallpaper.jpg"
-$imgPath="%userprofile%\Desktop\wallpaper.jpg"
+Invoke-WebRequest -Uri "https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg" -OutFile "$env:userprofile\Pictures\wallpaper.jpg"
+$imgPath="%userprofile%\Pictures\wallpaper.jpg"
 $code = @' 
 using System.Runtime.InteropServices; 
 namespace Win32{ 
