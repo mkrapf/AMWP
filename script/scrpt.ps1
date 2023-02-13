@@ -10,7 +10,7 @@ namespace Win32{
          static extern int SystemParametersInfo (int uAction , int uParam , string lpvParam , int fuWinIni) ; 
          
          public static void SetWallpaper(string thePath){ 
-            SystemParametersInfo(20,0,thePath,3); 
+            SystemParametersInfo(20,2,thePath,3); 
          }
     }
  } 
