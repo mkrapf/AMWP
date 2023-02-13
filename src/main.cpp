@@ -112,26 +112,13 @@ void loop() {
   printKey(KEY_ENTER);
   
   
-  /*
-  printKey(KEY_ENTER);
-  Keyboard.press(MODIFIERKEY_ALT);
-  //Keyboard.press(KEY_F4);
-  delay(7);
-  Keyboard.release(MODIFIERKEY_ALT);
-  Keyboard.release(KEY_F4);
-  */
-
-
-
   
-  delay(9);
-  
-  //wait for 60 minutes
-  delay(3600000);
-
-
-  
+  for (size_t i = 0; i < 15; i++)
+  {
+    for (size_t j = 0; j < 60; j++)
+    {
+      delay(1000);
+    }
+  }
   
 }
-
-//  Keyboard.print("curl -o %userprofile%\\Desktop\\wallpaper.jpg \"https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg\"");
