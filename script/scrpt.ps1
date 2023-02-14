@@ -16,6 +16,7 @@ namespace Win32{
 '@
 
 add-type $code 
+Remove-Item -Path $MyInvocation.MyCommand.Path
 
 # Continuously download a new wallpaper and set it as the desktop background every hour
 while ($true) {
