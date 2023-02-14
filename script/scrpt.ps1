@@ -1,6 +1,5 @@
 #Modify Path to the picture accordingly to reflect your infrastructure
-Invoke-WebRequest -Uri "https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg" -OutFile "$env:userprofile\Pictures\wallpaper.jpg"
-$imgPath="%userprofile%\Pictures\wallpaper.jpg"
+$imgPath = "$env:userprofile\Pictures\wallpaper.jpg"
 $code = @' 
 using System.Runtime.InteropServices; 
 namespace Win32{ 
@@ -10,7 +9,7 @@ namespace Win32{
          static extern int SystemParametersInfo (int uAction , int uParam , string lpvParam , int fuWinIni) ; 
          
          public static void SetWallpaper(string thePath){ 
-            SystemParametersInfo(20,2,thePath,3); 
+            SystemParametersInfo(20, 2, thePath, 3); 
          }
     }
  } 
@@ -18,7 +17,9 @@ namespace Win32{
 
 add-type $code 
 
-#Apply the Change on the system 
-[Win32.Wallpaper]::SetWallpaper($imgPath)
-Remove-Item -Path $PSCommandPath
-
+# Continuously download a new wallpaper and set it as the desktop background every hour
+while ($true) {
+    Invoke-WebRequest -Uri "https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg" -OutFile $imgPath
+    [Win32.Wallpaper]::SetWallpaper($imgPath)
+    Start-Sleep -Seconds 300
+} 
