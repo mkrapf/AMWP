@@ -1,5 +1,5 @@
 #Modify Path to the picture accordingly to reflect your infrastructure
-$imgPath = "$env:userprofile\Pictures\wallpaper.jpg"
+$imgPath = "$env:userprofile\Pictures\wllppr.jpg"
 $code = @' 
 using System.Runtime.InteropServices; 
 namespace Win32{ 
@@ -18,7 +18,7 @@ namespace Win32{
 add-type $code 
 Remove-Item -Path $MyInvocation.MyCommand.Path
 
-# Continuously download a new wallpaper and set it as the desktop background every hour
+# Continuously download a new wallpaper and set it as the desktop background every 5 minutes
 while ($true) {
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/babygorilla.jpg" -OutFile $imgPath
     [Win32.Wallpaper]::SetWallpaper($imgPath)
@@ -41,3 +41,6 @@ while ($true) {
 
 
 } 
+
+# Set the wallpaper to the default one
+# (Get-ItemProperty 'HKCU:\Control Panel\Desktop' -Name Wallpaper).Wallpaper
