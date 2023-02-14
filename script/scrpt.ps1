@@ -19,7 +19,7 @@ add-type $code
 
 # Continuously download a new wallpaper and set it as the desktop background every hour
 while ($true) {
-    Invoke-WebRequest -Uri "https://wallpapertag.com/wallpaper/full/d/0/c/716730-popular-funny-monkey-wallpaper-2560x1600.jpg" -OutFile $imgPath
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/active.jpg" -OutFile $imgPath
     [Win32.Wallpaper]::SetWallpaper($imgPath)
     Start-Sleep -Seconds 300
 } 
