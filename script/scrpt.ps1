@@ -24,32 +24,32 @@ while ($true) {
     Start-Sleep -Seconds 3
     Set-ItemProperty -Path $imgPath -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
     [Win32.Wallpaper]::SetWallpaper($imgPath)
-    Start-Sleep -Seconds 300
+    Start-Sleep -Seconds 100
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/confusedbaby.jpg" -OutFile $imgPath
     Start-Sleep -Seconds 3
     Set-ItemProperty -Path $imgPath -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
     [Win32.Wallpaper]::SetWallpaper($imgPath)
-    Start-Sleep -Seconds 300
+    Start-Sleep -Seconds 100
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/dicknose.jpg" -OutFile $imgPath
     Start-Sleep -Seconds 3
     Set-ItemProperty -Path $imgPath -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
     [Win32.Wallpaper]::SetWallpaper($imgPath)
-    Start-Sleep -Seconds 300
+    Start-Sleep -Seconds 100
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/grinning.jpg" -OutFile $imgPath
     Start-Sleep -Seconds 3
     Set-ItemProperty -Path $imgPath -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
     [Win32.Wallpaper]::SetWallpaper($imgPath)
-    Start-Sleep -Seconds 300
+    Start-Sleep -Seconds 100
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/scary.jpg" -OutFile $imgPath
     Start-Sleep -Seconds 3
     Set-ItemProperty -Path $imgPath -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
     [Win32.Wallpaper]::SetWallpaper($imgPath)
-    Start-Sleep -Seconds 300
+    Start-Sleep -Seconds 100
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mkrapf/AMWP/master/images/sitting.jpg" -OutFile $imgPath
     Start-Sleep -Seconds 3
     Set-ItemProperty -Path $imgPath -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
     [Win32.Wallpaper]::SetWallpaper($imgPath)
-    Start-Sleep -Seconds 300
+    Start-Sleep -Seconds 100
 
 
 } 
